@@ -178,13 +178,23 @@ function renderConfirm() {
   if (refBox) refBox.textContent = reference;
 
   const mailBtn = document.getElementById("send-receipt-btn");
-  if (mailBtn) {
+  const nameInput = document.getElementById("client-name");
+  const phoneInput = document.getElementById("client-phone");
+
+  function buildMailLink() {
+    const clientName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "(non renseigné)";
+    const clientPhone = phoneInput && phoneInput.value.trim() ? phoneInput.value.trim() : "(non renseigné)";
+
     const subject = encodeURIComponent(`Reçu de paiement — ${reference}`);
     const body = encodeURIComponent(
-      `Bonjour,\n\nVoici mon reçu de paiement pour la commande ${reference}.\nProduit : ${product.name}\nQuantité : ${qty}\nTotal : ${formatPrice(total)}\n\nMerci !`
+      `Bonjour,\n\nVoici mon reçu de paiement pour la commande ${reference}.\n\nNom et prénom : ${clientName}\nTéléphone : ${clientPhone}\n\nProduit : ${product.name}\nQuantité : ${qty}\nTotal : ${formatPrice(total)}\n\nMerci !`
     );
-    mailBtn.href = `mailto:mystickerplanett@gmail.com?subject=${subject}&body=${body}`;
+    if (mailBtn) mailBtn.href = `mailto:mystickerplanett@gmail.com?subject=${subject}&body=${body}`;
   }
+
+  buildMailLink();
+  if (nameInput) nameInput.addEventListener("input", buildMailLink);
+  if (phoneInput) phoneInput.addEventListener("input", buildMailLink);
 }
 
 renderCategories();
