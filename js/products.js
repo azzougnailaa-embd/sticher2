@@ -1,7 +1,7 @@
 const PRODUCTS = [
   {
     id: "pack-1",
-    name: "Nom du pack",
+    name: "tresors de l'ocean",
     price: 300,
     image: "../image/image1.jpg",
     color: "blue",
@@ -12,7 +12,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-2",
-    name: "Nom du pack",
+    name: "heritage DZ",
     price: 300,
     image: "../image/image2.jpg",
     color: "blue",
@@ -23,7 +23,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-3",
-    name: "Nom du pack",
+    name: "le bal des papillons",
     price: 300,
     image: "../image/image3.jpg",
     color: "blue",
@@ -34,7 +34,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-4",
-    name: "Nom du pack",
+    name: "soleil levant",
     price: 300,
     image: "../image/image4.jpg",
     color: "blue",
@@ -45,7 +45,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-5",
-    name: "Nom du pack",
+    name: "symphonie florale",
     price: 300,
     image: "../image/image5.jpg",
     color: "blue",
@@ -56,7 +56,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-6",
-    name: "Nom du pack",
+    name: "l'ame creative",
     price: 300,
     image: "../image/image6.jpg",
     color: "blue",
@@ -67,7 +67,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-7",
-    name: "Nom du pack",
+    name: "generation OTAKU",
     price: 300,
     image: "../image/image7.jpg",
     color: "blue",
@@ -78,7 +78,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-8",
-    name: "Nom du pack",
+    name: "press start",
     price: 300,
     image: "../image/image8.jpg",
     color: "blue",
@@ -89,7 +89,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-9",
-    name: "Nom du pack",
+    name: "pause gourmande",
     price: 300,
     image: "../image/image9.jpg",
     color: "blue",
@@ -100,7 +100,7 @@ const PRODUCTS = [
   },
   {
     id: "pack-10",
-    name: "Nom du pack",
+    name: "notes & reves",
     price: 300,
     image: "../image/image10.jpg",
     color: "blue",
