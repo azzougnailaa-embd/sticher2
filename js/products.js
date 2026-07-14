@@ -1,13 +1,20 @@
 const PRODUCTS = [
   {
     id: "pack-1",
-    name: "tresors de l'ocean",
+    name: "Trésors de l'océan",
     price: 300,
     image: "../image/image1.jpg",
+    gallery: [
+      "../image/image11.jpg",
+      "../image/image12.jpg",
+      "../image/image13.jpg",
+      "../image/image14.jpg",
+      
+    ],
     color: "blue",
     short: "Courte description (1 phrase, affichée sur la carte).",
     description: "Description longue et détaillée, affichée sur la page produit.",
-    sheets: "1 planche — 00 stickers",
+    sheets: "1 planche — 5 modèles de stickers",
     format: "PDF haute résolution — A4, prêt à imprimer",
   },
   {
