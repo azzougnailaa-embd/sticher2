@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Paiement — StickR</title>
 
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
 <div class="wrap">
   <header class="site">
     <a href="index.html" class="brand">🏷️ StickR <span class="tab">.pdf</span></a>
+    <a href="cart.html" style="position:relative; text-decoration:none; font-size:1.5rem; margin-left:auto;">
+      🛒
+      <span id="cart-count" style="position:absolute; top:-8px; right:-10px; background:var(--pink); color:#fff; font-size:0.7rem; font-weight:700; border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center;">0</span>
+    </a>
   </header>
 
   <a href="#" class="btn-link" id="back-link" style="margin-top:18px;">&larr; retour au produit</a>
@@ -43,7 +47,7 @@
   <footer class="site">Paiement par virement bancaire · Livraison du PDF par email après vérification</footer>
 </div>
 
-<script src="js/products.js"></script>
-<script src="js/main.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
