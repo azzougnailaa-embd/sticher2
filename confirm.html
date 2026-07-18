@@ -42,6 +42,12 @@
         <p style="font-weight:600; margin-bottom:8px;">Dernière étape : envoie ton reçu de paiement</p>
         <p style="color:var(--ink-soft); margin-top:0;">Clique sur le bouton ci-dessous : ton application email va s'ouvrir avec toutes les infos déjà remplies. Il ne te reste plus qu'à joindre une capture d'écran ou une photo de ton reçu Baridi Mob avant d'envoyer.</p>
         <a id="send-receipt-btn" href="#" class="btn full" style="margin-top:10px; display:inline-block; text-align:center;">📧 Ouvrir mon email pour envoyer le reçu</a>
+
+        <p style="color:var(--ink-soft); margin:16px 0 8px; text-align:center;">— ou copie l'adresse et envoie-le toi-même —</p>
+        <div style="display:flex; align-items:center; gap:8px; background:#fff; border:2px solid var(--ink); border-radius:8px; padding:10px 14px;">
+          <span id="receipt-email" style="flex:1; font-weight:600; word-break:break-all;">mystickerplanett@gmail.com</span>
+          <button type="button" id="copy-email-btn" style="border:2px solid var(--ink); background:#fff; border-radius:6px; padding:6px 12px; font-weight:600; cursor:pointer; white-space:nowrap;">📋 Copier</button>
+        </div>
       </div>
     </div>
   </div>
@@ -51,5 +57,17 @@
 
 <script src="../js/products.js"></script>
 <script src="../js/main.js"></script>
+<script>
+  const copyBtn = document.getElementById("copy-email-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+      const email = document.getElementById("receipt-email").textContent.trim();
+      navigator.clipboard.writeText(email).then(() => {
+        copyBtn.textContent = "✅ Copié !";
+        setTimeout(() => { copyBtn.textContent = "📋 Copier"; }, 1500);
+      });
+    });
+  }
+</script>
 </body>
 </html>
